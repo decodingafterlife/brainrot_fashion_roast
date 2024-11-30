@@ -49,7 +49,7 @@ def main():
             st.image(image, caption="Your outfit", use_column_width=True)
             
             # Generate roast button
-            if st.button("Roast My Outfit! 🔥"):
+            if st.button("Rate My Outfit! 🔥"):
                 with st.spinner("Analyzing your fashion choices..."):
                     roast = get_fashion_roast(image)
                     
