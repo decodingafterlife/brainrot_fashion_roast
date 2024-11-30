@@ -82,9 +82,9 @@ def main():
     # Page header
     st.title("🔥 AI Fashion Roast 👔")
     st.markdown("""
-    Upload your outfit photo and get roasted by an AI fashion critic with a randomly selected personality!
-    Each roast is unique and comes from a different perspective. 
-    Don't take it too seriously - it's all in good fun! 😄
+    Tired of always wondering what other creatures having a eerie shaped muscle as their 
+    processing unit 🧠, are thinking about your outfit? Don't worry Mr Chipper got you covered,
+    he'll give an honest opinion on your fashion without any discrimination or lies 📢
     """)
     
     # File uploader
@@ -114,11 +114,7 @@ def main():
     # Footer
     st.markdown("---")
     st.markdown("""
-    ### About
-    This app uses Google's Gemini AI to provide humorous fashion feedback in various styles.
-    Each roast comes from a unique perspective, making every critique different and entertaining!
-    
-    Created with ❤️ using Streamlit and Gemini AI
+        If Mr Chipper says it's bad then it's bad, if he says it's good then it's worse 😁
     """)
 
 if __name__ == "__main__":
