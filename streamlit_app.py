@@ -36,7 +36,7 @@ def main():
     st.markdown("""
     Tired of always wondering what other creatures having a eerie shaped musle as their 
     processing unit are thinking about your outfit? Don't worry Mr Chipper got you covered,
-    it'll give you honest opinion without any discrimination and lies!
+    he'll give you honest opinion without any discrimination or lies!
     """)
     
     # File uploader
