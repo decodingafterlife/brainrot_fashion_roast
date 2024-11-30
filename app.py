@@ -67,7 +67,6 @@ def get_fashion_roast(image):
 {base_prompt}
 
 Additional instructions:
-- Keep the response between 100-150 words
 - Make it entertaining and specific to the actual outfit
 - Include at least one ridiculous fashion prediction or trend
 - End with a silly but specific piece of advice
