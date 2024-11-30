@@ -55,7 +55,7 @@ def main():
                     
                 # Display the roast
                 st.markdown("### The Verdict 🎭")
-                # st.markdown(f">{roast}")
+                st.markdown(f">{roast}")
                 
         except Exception as e:
             st.error(f"Error processing image: {str(e)}")
