@@ -34,8 +34,8 @@ def main():
     # Page header
     st.title("🔥 AI Fashion Roast 👔")
     st.markdown("""
-    Tired of always wondering what other creatures, having a eerie shaped musle as their 
-    processing unit are thinking about your outfit? Don't worry Mr Chipper got you covered,
+    Tired of always wondering what other creatures having a eerie shaped muscle as their 
+    processing unit, are thinking about your outfit? Don't worry Mr Chipper got you covered,
     he'll give an honest opinion on your fashion without any discrimination or lies!
     """)
     
