@@ -23,7 +23,7 @@ def get_fashion_roast(image):
         model = genai.GenerativeModel('gemini-1.5-flash')
         prompt = """You are a fashion critic with a witty sense of humor. 
         Roast this outfit in a funny way. Focus on the style choices, 
-        color combinations, and overall look. Keep it under 100 words and make it entertaining."""
+        color combinations, and overall look. Keep it entertaining."""
         
         response = model.generate_content([prompt, image])
         return response.text
@@ -35,7 +35,7 @@ def main():
     st.title("🔥 AI Fashion Roast 👔")
     st.markdown("""
     Tired of always wondering what other creatures having a eerie shaped musle as their 
-    processing unit are thinking about your outfit? Don't worry our Bot got you covered,
+    processing unit are thinking about your outfit? Don't worry Mr Chipper got you covered,
     it'll give you honest opinion without any discrimination and lies!
     """)
     
@@ -63,8 +63,7 @@ def main():
     # Footer
     st.markdown("---")
     st.markdown("""
-    ### About
-    If the bot says it's bad then it's bad!
+    If Mr Chipper says it's bad then it's bad, if he says it's good then it's worse!
     """)
 
 if __name__ == "__main__":
