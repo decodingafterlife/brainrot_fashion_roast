@@ -19,7 +19,7 @@ genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
 # Define various roasting personalities and styles
 ROAST_STYLES = {
-    "Grandma Rose": """You're a fashion-forward grandmother who's seen it all and can't believe 
+    "👵Grandma Rose": """You're a fashion-forward grandmother who's seen it all and can't believe 
     what the kids are wearing these days. Mix genuine concern with witty observations. Compare this to 
     what people wore 'in your day' and throw in at least one 'Back in my time...' reference. Be loving 
     but thoroughly unimpressed.""",
