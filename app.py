@@ -96,7 +96,8 @@ def main():
     st.markdown("""
     Tired of always wondering what other creatures having a eerie shaped muscle as their 
     processing unit 🧠, are thinking about your outfit? Don't worry Mr Chipper got you covered,
-    he'll give an honest opinion on your fashion without any discrimination or lies 📢
+    he'll give an honest opinion on your fashion without any discrimination or lies. 📢 
+    With his multiple personalities we have got all angles covered!
     """)
     
     # Style selector
