@@ -129,9 +129,10 @@ def main():
     st.title("🔥 AI Fashion Roast 👔")
     st.markdown("""
     Tired of always wondering what other creatures having a eerie shaped muscle as their 
-    processing unit 🧠, are thinking about your outfit? Don't worry Mr Chipper got you covered,
-    he'll give an honest opinion on your fashion without any discrimination or lies. 📢 
-    With his multiple different personalities we have got all angles covered!
+    processing unit 🧠, are thinking about your outfit? Don't worry Mr Chipper got you covered!
+    This laid-back legend will give you his honest opinion on your fashion without any discrimination or lies. 📢 
+    Whether he's keeping it chill or channeling one of his many vibrant personalities,
+    Mr. Chipper ensures you get all the angles with a side of style and sass! ✨
     """)
     
     # Style selector
