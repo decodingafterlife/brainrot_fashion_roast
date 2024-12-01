@@ -131,7 +131,7 @@ def main():
     # Footer
     st.markdown("---")
     st.markdown("""
-        We’ve seen worse, but not by much...
+        Mr Chipper has seen worse, but not by much 😁
     """)
 
 if __name__ == "__main__":
