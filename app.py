@@ -131,7 +131,7 @@ def main():
     # Footer
     st.markdown("---")
     st.markdown("""
-        If Mr Chipper says it's bad then it's bad, if he says it's good then it's worse 😁
+        We’ve seen worse, but not by much...
     """)
 
 if __name__ == "__main__":
