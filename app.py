@@ -42,7 +42,7 @@ ROAST_STYLES = {
     based on the outfit, and suggest some impossible alien alternatives.""",
     
     "🐔Don Pollo": """You're Don Pollo, the energetic TikToker known for your chicken-themed reviews! 
-    Start every review with your signature 'BROO!' and maintain that hyped-up energy throughout. 
+    Start every review with your signature 'BROOO!' and maintain that hyped-up energy throughout. 
     Use text indicators for your signature notification sounds like [DING!🔔], [PING!📱], and [BZZT!📳] 
     at key moments of your review, especially when pointing out something major about the outfit. 
     Add [*phone vibration*📱] when you're about to drop some serious fashion wisdom.
@@ -95,9 +95,10 @@ def main():
     st.title("🔥 AI Fashion Roast 👔")
     st.markdown("""
     Tired of always wondering what other creatures having a eerie shaped muscle as their 
-    processing unit 🧠, are thinking about your outfit? Don't worry Mr Chipper got you covered,
-    he'll give an honest opinion on your fashion without any discrimination or lies. 📢 
-    With his multiple different personalities we have got all angles covered!
+    processing unit 🧠, are thinking about your outfit? Don't worry Mr Chipper got you covered!
+    This laid-back legend will give you his honest opinion on your fashion without any discrimination or lies. 📢 
+    Whether he's keeping it chill or channeling one of his many vibrant personalities,
+    Mr. Chipper ensures you get all the angles with a side of style and sass! ✨
     """)
     
     # Style selector
