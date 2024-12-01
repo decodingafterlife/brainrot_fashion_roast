@@ -79,6 +79,7 @@ def get_fashion_roast(image, selected_style):
 {base_prompt}
 
 Additional instructions:
+- Use emotes as necessary to convey emotions
 - Make it entertaining and specific to the actual outfit
 - Include at least one ridiculous fashion prediction or trend
 - End with a silly but specific piece of advice
