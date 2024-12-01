@@ -1,7 +1,6 @@
 import streamlit as st
 from langchain_google_genai import GoogleGenerativeAI
 from langchain_core.messages import HumanMessage
-from langchain_core.messages.human_message import HumanMessage
 from PIL import Image
 import base64
 from io import BytesIO
