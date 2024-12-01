@@ -1,7 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
 from PIL import Image
-import random
 
 # Page configuration
 st.set_page_config(
@@ -49,20 +48,30 @@ ROAST_STYLES = {
     
     "Alien Fashion Observer": """You're an alien writing a report on human fashion choices for your 
     home planet. Question the functionality of each item, make hilarious assumptions about human culture 
-    based on the outfit, and suggest some impossible alien alternatives."""
+    based on the outfit, and suggest some impossible alien alternatives.""",
+    
+    "Food Reviewer in the Car": """You're a charismatic black man who usually reviews food in your car, 
+    but today you're reviewing fashion instead. Use your signature enthusiastic energy and food-related 
+    metaphors. Compare clothing choices to different meals and snacks. Rate the 'flavor combination' of 
+    the colors. Talk about how the outfit is 'hitting' or 'bussin' and whether it gives that good 'mmm mmm' 
+    feeling. Throw in some car-related observations for authenticity.""",
+    
+    "The Ultra Chill Dude": """You're the most laid-back fashion critic ever - nothing phases you, 
+    everything's cool with you, but in the chillest way possible you point out what could be better. 
+    Use surfer/zen-like phrases like 'vibing with that choice', 'that's totally radical', and 'keeping 
+    it mellow'. Throw in references to meditation, good energy, and staying centered. Even your harshest 
+    critiques should sound super relaxed like 'not to harsh anyone's mellow, but...'. End with some 
+    ultra-chill advice that sounds like it came from a sunset meditation session. Pepper in words like 
+    'dude', 'bro', 'cosmic', and 'zen' while maintaining that unshakeable cool factor."""
 }
 
-def get_fashion_roast(image):
-    """Generate a fashion roast using Gemini AI with random style"""
+def get_fashion_roast(image, selected_style):
+    """Generate a fashion roast using Gemini AI with selected style"""
     try:
         model = genai.GenerativeModel('gemini-1.5-flash')
+        base_prompt = ROAST_STYLES[selected_style]
         
-        # Randomly select a roasting style
-        style_name = random.choice(list(ROAST_STYLES.keys()))
-        base_prompt = ROAST_STYLES[style_name]
-        
-        # Add specific instructions
-        prompt = f"""Style Persona: {style_name}
+        prompt = f"""Style Persona: {selected_style}
 
 {base_prompt}
 
@@ -74,9 +83,9 @@ Additional instructions:
 Analyze the outfit image and provide your unique critique:"""
         
         response = model.generate_content([prompt, image])
-        return style_name, response.text
+        return response.text
     except Exception as e:
-        return "Error", f"Error generating roast: {str(e)}"
+        return f"Error generating roast: {str(e)}"
 
 def main():
     # Page header
@@ -86,6 +95,13 @@ def main():
     processing unit 🧠, are thinking about your outfit? Don't worry Mr Chipper got you covered,
     he'll give an honest opinion on your fashion without any discrimination or lies 📢
     """)
+    
+    # Style selector
+    selected_style = st.selectbox(
+        "Choose your fashion critic:",
+        options=list(ROAST_STYLES.keys()),
+        index=0
+    )
     
     # File uploader
     uploaded_file = st.file_uploader("Choose an outfit photo", type=['jpg', 'jpeg', 'png'])
@@ -99,15 +115,12 @@ def main():
             # Generate roast button
             if st.button("Roast My Outfit! 🔥"):
                 with st.spinner("Analyzing your fashion choices..."):
-                    style_name, roast = get_fashion_roast(image)
+                    roast = get_fashion_roast(image, selected_style)
                     
-                    # Display the roast with style name
-                    st.markdown(f"### Roasted by: {style_name} 🎭")
+                    # Display the roast
+                    st.markdown(f"### Roasted by: {selected_style} 🎭")
                     st.markdown(f">{roast}")
-                    
-                    # Add a "Try Another Style" note
-                    st.info("Want a different perspective? Hit the button again for a new random style! 🎲")
-                
+        
         except Exception as e:
             st.error(f"Error processing image: {str(e)}")
     
