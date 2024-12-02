@@ -86,7 +86,12 @@ Additional instructions:
 
 Analyze the outfit image and provide your unique critique:"""
         
-        response = model.generate_content([prompt, image])
+        # Generate content with temperature set to 1.5
+        generation_config = genai.types.GenerationConfig(temperature=1.5)
+        response = model.generate_content(
+            [prompt, image],
+            generation_config=generation_config
+        )
         return response.text
     except Exception as e:
         return f"Error generating roast: {str(e)}"
